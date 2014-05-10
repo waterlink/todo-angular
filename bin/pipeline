@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# sass
+sass --watch app/assets/stylesheets:public/assets/stylesheets &
+SASS_PID=$!
+
+# coffee
+coffee --watch --output public/assets/javascripts --compile app/assets/javascripts &
+COFFEE_PID=$!
+
+# slim
+for x in $(ls app/views/*.slim app/views/*/*.slim app/view/*/*/*.slim); do
+  dir=$(dirname $x)/
+  file=$(basename $x)
+  bin/slim $dir $file
+done
+
+inotifywait -qmr -e close_write app/views | while :; do
+  read line
+  dir=$(echo $line | awk '{print $1}')
+  file=$(echo $line | awk '{print $3}')
+  bin/slim $dir $file
+done &
+SLIM_PID=$!
+
+trap "echo type 'exit' to exit;" INT
+
+while :; do
+  echo -n '> '
+  read cmd
+  if [[ "$cmd" = "exit" ]]; then
+    break
+  fi
+done
+
+echo kill -9 $SASS_PID $COFFEE_PID $SLIM_PID
+kill -9 $SASS_PID $COFFEE_PID $SLIM_PID
+

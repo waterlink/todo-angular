@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'slim'
+
+dir, file = ARGV
+exit unless file.end_with? '.slim'
+
+outdir = dir.gsub 'app/views', 'public'
+outfile = file.gsub /\.slim$/, '.html'
+
+Dir.mkdir outdir unless Dir.exists? outdir
+File.write "#{outdir}#{outfile}", Slim::Template.new("#{dir}#{file}").render(Object.new)
+puts "[Slim] Compiled #{outdir}#{outfile}"
+
