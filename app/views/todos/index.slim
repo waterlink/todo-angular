@@ -1,0 +1,6 @@
+ul
+  li ng-repeat="group in groups" ng-if="group.todos"
+    strong = "{{ group.name }}"
+    ul
+      li ng-repeat="todo in group.todos"
+        p = "{{ todo.text }}"
