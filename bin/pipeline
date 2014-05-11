@@ -20,6 +20,7 @@ inotifywait -qmr -e close_write app/views | while :; do
   dir=$(echo $line | awk '{print $1}')
   file=$(echo $line | awk '{print $3}')
   bin/slim $dir $file
+  bin/slim app/views/ index.slim
 done &
 SLIM_PID=$!
 

@@ -1,0 +1,15 @@
+doctype html
+html lang="en" ng-app="TodoApp"
+  head
+    meta charset="utf-8"
+    title Todo web app
+    link rel="stylesheet" href="/assets/stylesheets/application.css"
+    - ['', '-route'].each do |mod|
+      script src="/assets/vendor/angular/angular#{mod}.js"
+    - Dir["public/assets/javascripts/**/*.js"].each do |path|
+      - path = path.gsub /^public/, ''
+      script src=path
+  body ng-controller="TodosController"
+    h1 Todos
+    div ng-include="'layouts/_navigation.html'"
+    div(ng-view)
