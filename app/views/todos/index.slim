@@ -1,6 +1,1 @@
-ul
-  li ng-repeat="group in groups" ng-if="group.todos"
-    strong = "{{ group.name }}"
-    ul
-      li ng-repeat="todo in group.todos"
-        p = "{{ todo.text }}"
+div ng-include="'groups/_groups.html'" onload="type='all'"

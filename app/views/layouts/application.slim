@@ -10,6 +10,6 @@ html lang="en" ng-app="TodoApp"
       - path = path.gsub /^public/, ''
       script src=path
   body ng-controller="TodosController"
-    h1 Todos
-    div ng-include="'layouts/_navigation.html'"
-    div(ng-view)
+    h1.title Todos
+    div.navigation ng-include="'layouts/_navigation.html'"
+    div.view(ng-view)

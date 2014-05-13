@@ -38,6 +38,19 @@
           });
         }
       });
+      $scope.groups.byType = function(type) {
+        if (type === 'active') {
+          return $scope.groups.filter(function(group) {
+            return group.name !== 'Done';
+          });
+        } else if (type === 'done') {
+          return $scope.groups.filter(function(group) {
+            return group.name === 'Done';
+          });
+        } else {
+          return $scope.groups;
+        }
+      };
       return $scope.groups.forEach(function(group) {
         return group.todos = $scope.todos.filter(function(todo) {
           return todo.when === group.name;

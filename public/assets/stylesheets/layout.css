@@ -1,0 +1,68 @@
+/*
+Syntax error: Undefined mixin 'outer-container'.
+        on line 2 of app/assets/stylesheets/layout.scss, in `outer-container'
+        from line 2 of app/assets/stylesheets/layout.scss
+
+1: body {
+2:   @include outer-container;
+3: 
+4:   h1.title {
+5:     @include span-columns(6);
+6:     @include shift(4);
+7:   }
+
+Backtrace:
+app/assets/stylesheets/layout.scss:2:in `outer-container'
+app/assets/stylesheets/layout.scss:2
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:320:in `block in visit_mixin'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/stack.rb:98:in `block in with_mixin'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/stack.rb:98:in `with_mixin'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:318:in `visit_mixin'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/stack.rb:79:in `block in with_base'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:389:in `block (2 levels) in visit_rule'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:389:in `map'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:389:in `block in visit_rule'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:387:in `visit_rule'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/stack.rb:79:in `block in with_base'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:151:in `visit'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/tree/root_node.rb:20:in `render'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/engine.rb:274:in `render'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:414:in `update_stylesheet'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:186:in `each'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:393:in `on_file_changed'
+/home/user/.rvm/gems/ruby-2.1.1/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:248:in `block in watch'
+/home/user/.rvm/gems/ruby-2.1.1/gems/listen-2.7.1/lib/listen/listener.rb:149:in `call'
+/home/user/.rvm/gems/ruby-2.1.1/gems/listen-2.7.1/lib/listen/listener.rb:149:in `block in _wait_for_changes'
+/home/user/.rvm/gems/ruby-2.1.1/gems/listen-2.7.1/lib/listen/listener.rb:138:in `loop'
+/home/user/.rvm/gems/ruby-2.1.1/gems/listen-2.7.1/lib/listen/listener.rb:138:in `_wait_for_changes'
+/home/user/.rvm/gems/ruby-2.1.1/gems/listen-2.7.1/lib/listen/listener.rb:42:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'outer-container'.\A         on line 2 of app/assets/stylesheets/layout.scss, in `outer-container'\A         from line 2 of app/assets/stylesheets/layout.scss\A \A 1: body {\A 2:   @include outer-container;\A 3: \A 4:   h1.title {\A 5:     @include span-columns(6);\A 6:     @include shift(4);\A 7:   }"; }

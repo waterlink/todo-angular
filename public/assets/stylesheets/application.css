@@ -238,3 +238,52 @@ dl {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+nav ul {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  nav ul:after {
+    content: "";
+    display: table;
+    clear: both; }
+nav li {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  nav li:last-child {
+    margin-right: 0; }
+
+body {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  body:after {
+    content: "";
+    display: table;
+    clear: both; }
+  body h1.title {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 34.11922%; }
+    body h1.title:last-child {
+      margin-right: 0; }
+  body .navigation {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 25.58941%; }
+    body .navigation:last-child {
+      margin-right: 0; }
+  body .view {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 11.46316%; }
+    body .view:last-child {
+      margin-right: 0; }

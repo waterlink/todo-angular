@@ -24,6 +24,14 @@ module.controller 'TodosController', ['$scope', ($scope) ->
       groupNameHash[todo.when] = 1
       $scope.groups.push name: todo.when
 
+  $scope.groups.byType = (type) ->
+    if type == 'active'
+      $scope.groups.filter (group) -> group.name isnt 'Done'
+    else if type == 'done'
+      $scope.groups.filter (group) -> group.name is 'Done'
+    else
+      $scope.groups
+
   $scope.groups.forEach (group) ->
     group.todos = $scope.todos.filter (todo) -> todo.when is group.name
 ]
