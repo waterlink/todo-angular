@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # sass
-sass --watch app/assets/stylesheets:public/assets/stylesheets &
+sass --require ./lib/sass/sass --watch app/assets/stylesheets:public/assets/stylesheets &
 SASS_PID=$!
 
 # coffee

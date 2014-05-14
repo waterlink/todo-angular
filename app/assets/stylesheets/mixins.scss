@@ -1,0 +1,18 @@
+@mixin mute {
+  color: #ddd;
+}
+
+@mixin control {
+  cursor: pointer;
+  padding-right: 1.5em;
+  color: #999;
+
+  &:hover {
+    color: #555;
+  }
+}
+
+@mixin striked {
+  text-decoration: line-through;
+}
+

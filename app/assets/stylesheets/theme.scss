@@ -1,0 +1,62 @@
+.todo-item {
+  @include outer-container;
+
+  &.done {
+    @include striked;
+  }
+
+  &:not(.done) {
+    .todo-checkmark {
+      @include mute;
+    }
+  }
+
+  &:hover {
+    .todo-actions {
+      display: initial;
+    }
+  }
+
+  .todo-checkmark {
+    @extend .fa;
+    @extend .fa-check;
+    @include span-columns(1);
+    @include control;
+
+    font-size: $base-font-size * 1.2;
+  }
+
+  .todo-content {
+    @include span-columns(6);
+  }
+
+  .todo-actions {
+    @include span-columns(5);
+
+    display: none;
+  }
+}
+
+.todo-actions {
+  div {
+    @extend .fa;
+    @include control;
+  }
+
+  .edit {
+    @extend .fa-edit;
+  }
+
+  .remove {
+    @extend .fa-trash-o;
+  }
+
+  .ok {
+    @extend .fa-check-square-o;
+  }
+
+  .cancel {
+    @extend .fa-times;
+  }
+}
+

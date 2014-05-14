@@ -1,1 +1,1 @@
-<strong class="group-name">{{ group.name }}</strong><ul class="todo-list"><li class="todo-item" ng-include="&#39;todos/_todo.html&#39;" ng-repeat="todo in group.todos"></li></ul>
+<strong class="group-name">{{ group.name }}</strong><ul class="todo-list"><li class="todo-item" ng-class="{ done: todo.when == &#39;Done&#39; }" ng-include="&#39;todos/_todo.html&#39;" ng-repeat="todo in group.todos"></li></ul>

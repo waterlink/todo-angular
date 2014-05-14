@@ -13,7 +13,8 @@
           when: 'Expired'
         }, {
           text: 'A little workout',
-          when: 'Done'
+          when: 'Done',
+          when_was: 'Today'
         }, {
           text: 'Shopping',
           when: 'Today'
@@ -31,6 +32,7 @@
       $scope.groups = [];
       groupNameHash = {};
       $scope.todos.forEach(function(todo) {
+        todo.editedText = todo.text;
         if (!groupNameHash[todo.when]) {
           groupNameHash[todo.when] = 1;
           return $scope.groups.push({
@@ -51,11 +53,29 @@
           return $scope.groups;
         }
       };
-      return $scope.groups.forEach(function(group) {
+      $scope.groups.forEach(function(group) {
         return group.todos = $scope.todos.filter(function(todo) {
           return todo.when === group.name;
         });
       });
+      $scope.toggle = function(todo) {
+        if (todo.when === 'Done') {
+          return todo.when = todo.when_was;
+        } else {
+          todo.when_was = todo.when;
+          return todo.when = 'Done';
+        }
+      };
+      $scope.toggleEditing = function(todo) {
+        return todo.editing = todo.editing ? false : true;
+      };
+      $scope.finishEditing = function(todo) {
+        todo.text = todo.editedText;
+        return $scope.toggleEditing(todo);
+      };
+      return $scope.remove = function(todo) {
+        return console.log("TodosController#remove(todo)::STUB");
+      };
     }
   ]);
 

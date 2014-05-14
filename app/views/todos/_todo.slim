@@ -1,1 +1,9 @@
-p.todo-text = "{{ todo.text }}"
+.todo-content
+  .todo-checkmark ng-click="toggle(todo)"
+  p.todo-text ng-if="!todo.editing" = "{{ todo.text }}"
+  input.todo-text ng-model="todo.editedText" ng-if="todo.editing"
+.todo-actions
+  .edit ng-click="toggleEditing(todo)" ng-if="!todo.editing"
+  .remove ng-click="remove(todo)" ng-if="!todo.editing"
+  .ok ng-click="finishEditing(todo)" ng-if="todo.editing"
+  .cancel ng-click="toggleEditing(todo)" ng-if="todo.editing"
